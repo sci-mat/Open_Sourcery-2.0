@@ -1,0 +1,107 @@
+body {
+    font-family: Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* -------- THEME SWITCH DROPDOWN -------- */
+.theme-box {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+select {
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* -------- CALCULATOR BOX -------- */
+.calc {
+    width: 340px;
+    background: var(--bg);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px var(--shadow);
+    backdrop-filter: blur(5px);
+}
+
+#display {
+    width: 100%;
+    height: 70px;
+    font-size: 30px;
+    text-align: right;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background: var(--display-bg);
+    color: var(--display-text);
+    margin-bottom: 20px;
+}
+
+.btns {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+button {
+    height: 55px;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    background: var(--btn);
+    color: var(--text);
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.equal {
+    background: var(--equal);
+    color: black;
+}
+
+/* ----------- THEMES ----------- */
+
+/* DARK THEME */
+body.dark {
+    --bg: #1a1a1a;
+    --shadow: black;
+    --btn: #333;
+    --text: white;
+    --display-bg: #000;
+    --display-text: #00ffaa;
+    --equal: #00ffaa;
+}
+
+/* LIGHT THEME */
+body.light {
+    --bg: white;
+    --shadow: #999;
+    --btn: #d9d9d9;
+    --text: black;
+    --display-bg: #e8e8e8;
+    --display-text: black;
+    --equal: #ffd700;
+}
+
+/* VIBRANT THEME */
+body.vibrant {
+    --bg: #ffffff22;
+    --shadow: #0008;
+    --btn: linear-gradient(135deg, #2196f3, #4caf50);
+    --text: white;
+    --display-bg: #ffffff50;
+    --display-text: black;
+    --equal: linear-gradient(135deg, #ffeb3b, #ff5722);
+    background: linear-gradient(135deg, #ff00c8, #ff8800);
+}

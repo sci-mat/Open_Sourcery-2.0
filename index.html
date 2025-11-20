@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+
+    <div class="theme-box">
+        <select id="themeSelector" onchange="changeTheme()">
+            <option value="dark">Dark Theme</option>
+            <option value="light">Light Theme</option>
+            <option value="vibrant">Vibrant Theme</option>
+        </select>
+    </div>
+
+    <div class="calc">
+        <input type="text" id="display" disabled>
+
+        <div class="btns">
+            <button onclick="pressKey('sin(')">sin</button>
+            <button onclick="pressKey('cos(')">cos</button>
+            <button onclick="pressKey('tan(')">tan</button>
+            <button onclick="pressKey('Math.log(')">log</button>
+            <button onclick="pressKey('Math.sqrt(')">√</button>
+
+            <button onclick="pressKey('7')">7</button>
+            <button onclick="pressKey('8')">8</button>
+            <button onclick="pressKey('9')">9</button>
+            <button onclick="pressKey('/')">/</button>
+            <button onclick="pressKey('(')">(</button>
+
+            <button onclick="pressKey('4')">4</button>
+            <button onclick="pressKey('5')">5</button>
+            <button onclick="pressKey('6')">6</button>
+            <button onclick="pressKey('*')">*</button>
+            <button onclick="pressKey(')')">)</button>
+
+            <button onclick="pressKey('1')">1</button>
+            <button onclick="pressKey('2')">2</button>
+            <button onclick="pressKey('3')">3</button>
+            <button onclick="pressKey('-')">-</button>
+            <button onclick="pressKey('^')">^</button>
+
+            <button onclick="pressKey('0')">0</button>
+            <button onclick="pressKey('.')">.</button>
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="pressKey('+')">+</button>
+            <button class="equal" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
